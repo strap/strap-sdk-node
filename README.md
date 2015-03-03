@@ -1,25 +1,25 @@
-# waiter
+# strapSDK
 
-Waiter provides an easy to use, chainable API for interacting with our
-backend services.  Its purpose is to abstract away deployment information from
-our primary APIs, i.e. not having to manually track internal ip addresses for
-our deployed load balancer / server instances.
+Strap SDK Node provides an easy to use, chainable API for interacting with our
+API services.  Its purpose is to abstract away resource information from
+our primary API, i.e. not having to manually track API information for
+your custom API endpoint.
 
-Waiter keys off of a global discovery object, currently hosted as a static
-file in google storage. In the future, we should look to alter this in a way
-that it can be easily updated as our deployment evolves.
+Strap SDK Node keys off of a global API discovery object using the read token for the API. 
+The Strap SDK Node extracts the need for developers to know, manage, and integrate the API endpoints.
 
-The current version can be found here:
+The a Project API discovery can be found here:
 
-[http://storage.googleapis.com/strap-discovery/discovery](http://storage.googleapis.com/strap-discovery/discovery)
+HEADERS: "x-auth-token": 
+GET [https://api2.straphq.com/discover]([https://api2.straphq.com/discover)
 
-Once the above has been fetched, `waiter` will fetch each service discovery
-endpoint and build its API, based on the user's desired services.
+Once the above has been fetched, `strapSDK` will fetch the API discover
+endpoint for the project and build its API.
 
 ### Installation
 
 ```
-npm install git+ssh://git@github.com:strap/waiter.git
+npm install git+ssh://git@github.com:strap/strap-sdk-node.git
 ```
 
 ### Usage
@@ -27,32 +27,29 @@ npm install git+ssh://git@github.com:strap/waiter.git
 Below is a basic use case.
 
 ```javascript
-// Setup waiter, only request vodka and absinthe services
-var Waiter = require('waiter'),
-    waiter = new Waiter({ only: ['vodka', 'absinthe'] });
+// Setup strapSDK, passing in the Read Token for the Project
+var StrapSDK = require('strapSDK'),
+    strapSDK = new StrapSDK({ token: "{Read Token for Strap Project}" });
 
-// Tell waiter to get started
-waiter.discover();
+// Tell strapSDK to get started
+strapSDK.discover();
 
-// Listen for ready before interacting with waiter
-waiter.on('ready', function () {
-    // Fetch a single user
-    waiter.user.get({ id: 'someid' }, function (err, user) {
+// Listen for ready before interacting with strapSDK
+strapSDK.on('ready', function () {
+    // Fetch a user list for the Project
+    strapSDK.users({}, function (err, users) {
         /* etc */
     });
 
-    // Post a login on behalf of a user
-    waiter.login.post({
-        email: 'foo@foo.com',
-        password: 'foo'
-    }, function (err, status) {
+    // Fetch a user's data for today
+    strapSDK.today({guid: "user-guid-value"}, function (err, data) {
         /* etc */
-    }});
+    });;
 });
 ```
 
 ### REPL
 
-`waiter` also ships with a repl should you be interested in playing around with it.  And example screen shot is included:
+`strapSDK` also ships with a repl should you be interested in playing around with it.  And example screen shot is included:
 
-![](https://cldup.com/2MloMlu9ps.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/2z0I3P0N0O213r2T1t3D/Image%202015-03-03%20at%201.00.13%20PM.png)
