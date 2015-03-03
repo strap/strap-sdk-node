@@ -1,0 +1,30 @@
+{
+  "name": "strap-sdk",
+  "version": "1.0.0",
+  "description": "Easy API service communication with Strap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:strap/strap-sdk.git"
+  },
+  "author": {
+    "name": "Brian Powell",
+    "email": "brian@straphq.com",
+    "url": "http://straphq.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strap/strap-sdk/issues"
+  },
+  "homepage": "https://github.com/strap/strap-sdk",
+  "dependencies": {
+    "async": "^0.9.0",
+    "debug": "^2.1.1",
+    "lodash": "^3.1.0",
+    "nconf": "^0.7.1",
+    "request": "^2.53.0"
+  }
+}
