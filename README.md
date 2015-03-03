@@ -10,7 +10,7 @@ The Strap SDK Node extracts the need for developers to know, manage, and integra
 
 The a Project API discovery can be found here:
 
-HEADERS: "x-auth-token": 
+HEADERS: "X-Auth-Token": 
 GET [https://api2.straphq.com/discover]([https://api2.straphq.com/discover)
 
 Once the above has been fetched, `strapSDK` will fetch the API discover
