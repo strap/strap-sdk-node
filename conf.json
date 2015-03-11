@@ -1,6 +1,6 @@
 {
     "discovery": {
         "url": "https://api2.straphq.com/discover",
-        "interval": 60e3
+        "interval": 600e3
     }
 }

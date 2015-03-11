@@ -27,29 +27,47 @@ npm install git+ssh://git@github.com:strap/strap-sdk-node.git
 Below is a basic use case.
 
 ```javascript
-// Setup strapSDK, passing in the Read Token for the Project
-var StrapSDK = require('strapSDK'),
-    strapSDK = new StrapSDK({ token: "{Read Token for Strap Project}" });
+// Setup strap SDK, passing in the Read Token for the Project
+var Strap = require('strap')({ token: "{Read Token for Strap Project}" });
 
-// Tell strapSDK to get started
-strapSDK.discover();
+// Tell Strap to get started
+Strap.discover();
 
-// Listen for ready before interacting with strapSDK
-strapSDK.on('ready', function () {
-    // Fetch a user list for the Project
-    strapSDK.users({}, function (err, users) {
+// Listen for ready before interacting with Strap
+Strap.on('ready', function () {
+    
+	// List available endpoints
+    Strap.endpoints();
+
+    // Fetch a user's activity
+    Strap.getActivity({guid: "user-guid-value"}, function (err, data) {
         /* etc */
     });
 
-    // Fetch a user's data for today
-    strapSDK.today({guid: "user-guid-value"}, function (err, data) {
+    // Fetch a report's data
+    Strap.getReport({"id":"report-id"}, function (err, data) {
         /* etc */
-    });;
+    });
+
+    // Fetch trigger data
+    Strap.getTrigger({"id":"trigger-id"}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch all user data for today
+    Strap.getToday({}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch a user list for the Project
+    Strap.getUsers({}, function (err, users) {
+        /* etc */
+    });
 });
 ```
 
 ### REPL
 
-`strapSDK` also ships with a repl should you be interested in playing around with it.  And example screen shot is included:
+`Strap` also ships with a repl should you be interested in playing around with it.  And example screen shot is included:
 
-![](https://s3.amazonaws.com/f.cl.ly/items/2z0I3P0N0O213r2T1t3D/Image%202015-03-03%20at%201.00.13%20PM.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/3C2w2J0g093D0i3S3Z20/Image%202015-03-11%20at%2011.45.16%20AM.png)
