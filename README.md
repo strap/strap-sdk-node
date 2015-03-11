@@ -1,4 +1,4 @@
-# strapSDK
+# NodeJS > Strap Server-Side SDK 
 
 Strap SDK Node provides an easy to use, chainable API for interacting with our
 API services.  Its purpose is to abstract away resource information from
