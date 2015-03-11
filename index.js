@@ -1,9 +1,9 @@
 /**
  * index.js
- * Entry point into strap-sdk
+ * Entry point into strap
  *
  * (C) Strap LLC 2015
  */
 
-// Expose strap-sdk
-module.exports = require('./lib/strap-sdk');
+// Expose strap
+module.exports = require('./lib/strap');
