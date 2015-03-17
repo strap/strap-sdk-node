@@ -44,7 +44,7 @@ Strap.on('ready', function () {
 
     // Fetch a user's activity
     // URL resource: "guid"
-    // Optional: "day", "count"
+    // Optional: "day", "count", "start", "end"  >> "start" and "end" use "YYYY-MM-DD" format
     Strap.getActivity("user-guid-value", function (err, data) {
         /* etc */
     });
