@@ -38,7 +38,7 @@ Strap.on('ready', function () {
     // No Params
 
     //Optional Param can be passed in as an array
-    // Strap.getActivity( ["day" => "YYYY-MM-DD", "guid" => "demo-strap"] )
+    // Strap.getActivity( [day: "YYYY-MM-DD", guid: "demo-strap"] )
     //URL resources can be passed as Strings or in the Array
     // Strap.getActivity( "demo-strap" )
 
@@ -66,7 +66,7 @@ Strap.on('ready', function () {
     // Fetch trigger data
     // URL resource: "id"
     // Optional: "count"
-    Strap.getTrigger({"id":"trigger-id"}, function (err, data) {
+    Strap.getTrigger({id: "trigger-id"}, function (err, data) {
         /* etc */
     });
 
