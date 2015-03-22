@@ -49,6 +49,13 @@ Strap.on('ready', function () {
         /* etc */
     });
 
+    // Fetch all user data for month
+    // URL resource: none
+    // Optional: "guid", "page", "per_page"
+    Strap.getMonth({}, function (err, data) {
+        /* etc */
+    });
+
     // Fetch a report's data
     // URL resource: "id"
     // Optional: none
@@ -58,7 +65,7 @@ Strap.on('ready', function () {
 
     // Fetch all user data for today
     // URL resource: none
-    // Optional: "guid", "page"
+    // Optional: "guid", "page", "per_page"
     Strap.getToday({}, function (err, data) {
         /* etc */
     });
@@ -74,6 +81,13 @@ Strap.on('ready', function () {
     // URL resource: none
     // Optional: "platform", "count"
     Strap.getUsers({}, function (err, users) {
+        /* etc */
+    });
+
+    // Fetch all user data for week
+    // URL resource: none
+    // Optional: "guid", "page", "per_page"
+    Strap.getWeek({}, function (err, data) {
         /* etc */
     });
 });
