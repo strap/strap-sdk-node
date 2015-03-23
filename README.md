@@ -37,10 +37,24 @@ Strap.on('ready', function () {
     Strap.endpoints();
     // No Params
 
-    //Optional Param can be passed in as an array
-    // Strap.getActivity( [day: "YYYY-MM-DD", guid: "demo-strap"] )
-    //URL resources can be passed as Strings or in the Array
-    // Strap.getActivity( "demo-strap" )
+    // Optional Param can be passed in as an array
+    // Strap.activity.get( {day: "YYYY-MM-DD", guid: "demo-strap"}, callback )
+    // URL resources can be passed as Strings or in the Array
+    // Strap.activity.get( "demo-strap", callback )
+
+    // Each endpoint has three methods
+    // Get a set of records
+    Strap.activity.get( params, callback ); 
+    // Get the next set of records
+    var set = Strap.activity.next(); 
+    // Get All set of records until the max page count is reached
+    Strap.activity.getAll( params, callback ); 
+
+    // Each point point also exposes two detail values
+    // Get the page information for the request
+    Strap.activity.pageData // Contains the "page", "next", "pages", "per_page" information for the request
+    // Check to see if there is a next page
+    Strap.activity.pageData // Contains BOOL true || false if there is more data that can be pulled
 
     // Fetch a user's activity
     // URL resource: "guid"
