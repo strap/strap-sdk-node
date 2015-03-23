@@ -54,7 +54,7 @@ Strap.on('ready', function () {
     // Get the page information for the request
     Strap.activity.pageData // Contains the "page", "next", "pages", "per_page" information for the request
     // Check to see if there is a next page
-    Strap.activity.pageData // Contains BOOL true || false if there is more data that can be pulled
+    Strap.activity.hasNext // Contains BOOL true || false if there is more data that can be pulled
 
     // Fetch a user's activity
     // URL resource: "guid"
