@@ -6,7 +6,7 @@ our primary API, i.e. not having to manually track API information for
 your custom API endpoint.
 
 Strap Server-Side SDK keys off of a global API discovery object using the read token for the API.
-The SStrap Server-Side SDK extracts the need for developers to know, manage, and integrate the API endpoints.
+The Strap Server-Side SDK extracts the need for developers to know, manage, and integrate the API endpoints.
 
 The a Project API discovery can be found here:
 
