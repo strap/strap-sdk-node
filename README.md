@@ -48,60 +48,60 @@ Strap.on('ready', function () {
 
     // Each endpoint that supports the "page" value also exposes two additional methods and two detail values
     // Get the next set of records
-    var set = Strap.activity.next(); 
+    var set = Strap.month.next(); 
     // Get All set of records until the max page count is reached
-    Strap.activity.getAll( params, callback ); 
+    Strap.month.getAll( params, callback ); 
     // Get the page information for the request
-    Strap.activity.pageData // Contains the "page", "next", "pages", "per_page" information for the request
+    Strap.month.pageData // Contains the "page", "next", "pages", "per_page" information for the request
     // Check to see if there is a next page
-    Strap.activity.hasNext // Contains BOOL true || false if there is more data that can be pulled
+    Strap.month.hasNext // Contains BOOL true || false if there is more data that can be pulled
 
     // Fetch a user's activity
     // URL resource: "guid"
     // Optional: "day", "count", "start", "end"  >> "start" and "end" use "YYYY-MM-DD" format
-    Strap.getActivity("user-guid-value", function (err, data) {
+    Strap.activity.get("user-guid-value", function (err, data) {
         /* etc */
     });
 
     // Fetch all user data for month
     // URL resource: none
     // Optional: "guid", "page", "per_page"
-    Strap.getMonth({}, function (err, data) {
+    Strap.month.get({}, function (err, data) {
         /* etc */
     });
 
     // Fetch a report's data
     // URL resource: "id"
     // Optional: none
-    Strap.getReport("id", function (err, data) {
+    Strap.report.get("id", function (err, data) {
         /* etc */
     });
 
     // Fetch all user data for today
     // URL resource: none
     // Optional: "guid", "page", "per_page"
-    Strap.getToday({}, function (err, data) {
+    Strap.today.get({}, function (err, data) {
         /* etc */
     });
 
     // Fetch trigger data
     // URL resource: "id"
     // Optional: "count"
-    Strap.getTrigger({id: "trigger-id"}, function (err, data) {
+    Strap.trigger.get({id: "trigger-id"}, function (err, data) {
         /* etc */
     });
 
     // Fetch a user list for the Project
     // URL resource: none
     // Optional: "platform", "count"
-    Strap.getUsers({}, function (err, users) {
+    Strap.users.get({}, function (err, users) {
         /* etc */
     });
 
     // Fetch all user data for week
     // URL resource: none
     // Optional: "guid", "page", "per_page"
-    Strap.getWeek({}, function (err, data) {
+    Strap.week.get({}, function (err, data) {
         /* etc */
     });
 });
