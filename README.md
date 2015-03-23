@@ -43,7 +43,7 @@ Strap.on('ready', function () {
     // Strap.activity.get( "demo-strap", callback )
 
     // Every endpoint has the get() method
-    // Get a set of records
+    // Get a record or set of records
     Strap.activity.get( params, callback ); 
 
     // Each endpoint that supports the "page" value also exposes two additional methods and two detail values
