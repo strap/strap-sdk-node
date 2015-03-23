@@ -42,15 +42,15 @@ Strap.on('ready', function () {
     // URL resources can be passed as Strings or in the Array
     // Strap.activity.get( "demo-strap", callback )
 
-    // Each endpoint has three methods
+    // Every endpoint has the get() method
     // Get a set of records
     Strap.activity.get( params, callback ); 
+
+    // Each endpoint that supports the "page" value also exposes two additional methods and two detail values
     // Get the next set of records
     var set = Strap.activity.next(); 
     // Get All set of records until the max page count is reached
     Strap.activity.getAll( params, callback ); 
-
-    // Each point point also exposes two detail values
     // Get the page information for the request
     Strap.activity.pageData // Contains the "page", "next", "pages", "per_page" information for the request
     // Check to see if there is a next page
