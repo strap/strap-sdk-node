@@ -53,6 +53,11 @@ strap.once('ready', function () {
 
     });
 
+    // is equivalent to for requests without URL parameteres
+    strap.users.get(function (err, users) {
+
+    });
+
     // If the resource has a path parameter, you may pass it short hand
     // like this
     strap.activity.get('userguid', function (err, activity) {
