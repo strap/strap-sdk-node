@@ -117,7 +117,7 @@ strap.once('ready', function () {
 
 ### API
 
-```
+```javascript
     // List available endpoints
     Strap.endpoints();
     // No Params
