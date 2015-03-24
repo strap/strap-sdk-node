@@ -10,4 +10,4 @@ local.context.logger = function (e, r) {
 
 local.context.Strap.on('error', function(e) {
 	console.log('err: ', e);
-})
+});
