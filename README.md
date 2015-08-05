@@ -205,14 +205,14 @@ strap.once('ready', function () {
     // Fetch a simple user object
     // URL resource: "guid"
     // Optional: none
-    Strap.user.get({}, function (err, users) {
+    Strap.user.get({}, function (err, data) {
         /* etc */
     });
 
     // Fetch a user list for the Project
     // URL resource: none
     // Optional: "platform", "count"
-    Strap.users.get({}, function (err, users) {
+    Strap.users.get({}, function (err, data) {
         /* etc */
     });
 
