@@ -138,6 +138,28 @@ strap.once('ready', function () {
         /* etc */
     });
 
+    // Fetch a user's behavior profile
+    // URL resource: "guid"
+    // Optional: none
+    Strap.behavior.get("user-guid-value", function (err, data) {
+        /* etc */
+    });
+
+    // Fetch the micro-segmentation job list or a individual micro-segmentation job
+    // URL resource: "jobId"
+    // Optional: "jobId", "status"
+    Strap.job.get({params}}, function (err, data) {
+        /* etc */
+    });
+
+    // Create a micro-segmentation job
+    // URL resource: none
+    // Requires: "name"
+    // Optional: "description", "guids", "startDate", "endDate", "notificationUrl"  >> "guids" is an array of guid strings
+    Strap.job.post({params}}, function (err, data) {
+        /* etc */
+    });
+
     // Fetch all user data for month
     // URL resource: none
     // Optional: "guid", "page", "per_page"
@@ -152,6 +174,20 @@ strap.once('ready', function () {
         /* etc */
     });
 
+    // Fetch a report's raw data
+    // URL resource: "id"
+    // Optional: "type"
+    Strap.raw.get({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch the segmentation for the projet
+    // URL resource: none
+    // Optional: "date", "period"
+    Strap.segmentation.get({}, function (err, data) {
+        /* etc */
+    });
+
     // Fetch all user data for today
     // URL resource: none
     // Optional: "guid", "page", "per_page"
@@ -163,6 +199,13 @@ strap.once('ready', function () {
     // URL resource: "id"
     // Optional: "count"
     Strap.trigger.get({id: "trigger-id"}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch a simple user object
+    // URL resource: "guid"
+    // Optional: none
+    Strap.user.get({}, function (err, users) {
         /* etc */
     });
 
