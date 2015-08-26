@@ -222,7 +222,7 @@ strap.once('ready', function () {
         /* etc */
     });
 
-    // Fetch all user's trend data
+    // Fetch a user's trend data
     // URL resource: none
     // Optional: "guid"
     Strap.trend.get({}, function (err, data) {
