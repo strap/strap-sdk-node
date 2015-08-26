@@ -146,8 +146,8 @@ strap.once('ready', function () {
     });
 
     // Fetch the micro-segmentation job list or a individual micro-segmentation job
-    // URL resource: "jobId"
-    // Optional: "jobId", "status"
+    // URL resource: "id"
+    // Optional: "id", "status"
     Strap.job.get({params}}, function (err, data) {
         /* etc */
     });
@@ -170,6 +170,13 @@ strap.once('ready', function () {
     // Delete a micro-segmentation job
     // URL resource: "id"
     Strap.job.delete("job-id", function (err, data) {
+        /* etc */
+    });
+
+    // Fetch the micro-segmentation job data
+    // URL resource: "id"
+    // Optional: "id"
+    Strap.job_data.get({params}}, function (err, data) {
         /* etc */
     });
 
