@@ -156,7 +156,20 @@ strap.once('ready', function () {
     // URL resource: none
     // Requires: "name"
     // Optional: "description", "guids", "startDate", "endDate", "notificationUrl"  >> "guids" is an array of guid strings
-    Strap.job.post({params}}, function (err, data) {
+    Strap.job.post({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Update a micro-segmentation job
+    // URL resource: "id"
+    // Optional: "name", "description"
+    Strap.job.put({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Delete a micro-segmentation job
+    // URL resource: "id"
+    Strap.job.delete("job-id", function (err, data) {
         /* etc */
     });
 
@@ -174,10 +187,24 @@ strap.once('ready', function () {
         /* etc */
     });
 
+    // Fetch a report's food data
+    // URL resource: "id"
+    // Optional: none
+    Strap.food.get({params}, function (err, data) {
+        /* etc */
+    });
+
     // Fetch a report's raw data
     // URL resource: "id"
     // Optional: "type"
-    Strap.raw.get({params}, function (err, data) {
+    Strap.report_raw.get({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch a report's workout data
+    // URL resource: "id"
+    // Optional: none
+    Strap.report_workout.get({params}, function (err, data) {
         /* etc */
     });
 
@@ -195,10 +222,46 @@ strap.once('ready', function () {
         /* etc */
     });
 
+    // Fetch all user's trend data
+    // URL resource: none
+    // Optional: "guid"
+    Strap.trend.get({}, function (err, data) {
+        /* etc */
+    });
+
+    // List project triggers or specific trigger
+    // URL resource: none
+    // Requires: none
+    // Optional: "id", "key", "type", "actionType"
+    Strap.trigger.get({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Create a trigger
+    // URL resource: none
+    // Requires: "active", "name", "type", "range", "conditions"
+    // Optional: "actionType", "actionUrl"
+    Strap.trigger.post({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Update a trigger
+    // URL resource: "id"
+    // Optional: "active", "name", "type", "range", "conditions", "actionType", "actionUrl"
+    Strap.trigger.put({params}, function (err, data) {
+        /* etc */
+    });
+
+    // Delete a trigger
+    // URL resource: "id"
+    Strap.trigger.delete("trigger-id", function (err, data) {
+        /* etc */
+    });
+
     // Fetch trigger data
     // URL resource: "id"
     // Optional: "count"
-    Strap.trigger.get({id: "trigger-id"}, function (err, data) {
+    Strap.trigger_data.get({id: "trigger-id"}, function (err, data) {
         /* etc */
     });
 
