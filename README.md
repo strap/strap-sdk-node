@@ -154,7 +154,7 @@ strap.once('ready', function () {
 
     // Create a micro-segmentation job
     // URL resource: none
-    // Requires: "name"
+    // Required: "name"
     // Optional: "description", "guids", "startDate", "endDate", "notificationUrl"  >> "guids" is an array of guid strings
     Strap.job.post({params}, function (err, data) {
         /* etc */
@@ -238,7 +238,7 @@ strap.once('ready', function () {
 
     // List project triggers or specific trigger
     // URL resource: none
-    // Requires: none
+    // Required: none
     // Optional: "id", "key", "type", "actionType"
     Strap.trigger.get({params}, function (err, data) {
         /* etc */
@@ -246,7 +246,7 @@ strap.once('ready', function () {
 
     // Create a trigger
     // URL resource: none
-    // Requires: "active", "name", "type", "range", "conditions"
+    // Required: "active", "name", "type", "range", "conditions"
     // Optional: "actionType", "actionUrl"
     Strap.trigger.post({params}, function (err, data) {
         /* etc */
