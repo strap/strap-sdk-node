@@ -16,7 +16,7 @@ GET [https://api2.straphq.com/discover]([https://api2.straphq.com/discover)
 ### Installation
 
 ```
-npm install git+ssh://git@github.com:strap/strap-sdk-node.git
+npm install strap-sdk-node
 ```
 
 ### Initialization
