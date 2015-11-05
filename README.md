@@ -299,4 +299,4 @@ strap.once('ready', function () {
 
 `Strap` also ships with a repl should you be interested in playing around with it.  And example screen shot is included:
 
-![](https://s3.amazonaws.com/f.cl.ly/items/3C2w2J0g093D0i3S3Z20/Image%202015-03-11%20at%2011.45.16%20AM.png)
+![](https://s3.amazonaws.com/strap-sdk/strap-sdk-node.png)
