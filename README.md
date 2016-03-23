@@ -122,7 +122,7 @@ strap.once('ready', function () {
     Strap.endpoints();
     // No Params
 
-    // Optional Param can be passed in as an array
+    // Muliple Optional Param can be passed in as an object
     // Strap.activity.get( {day: "YYYY-MM-DD", guid: "demo-strap"}, callback )
     // URL resources can be passed as Strings or in the Array
     // Strap.activity.get( "demo-strap", callback )
@@ -134,14 +134,14 @@ strap.once('ready', function () {
     // Fetch a user's activity
     // URL resource: "guid"
     // Optional: "date", "count", "start", "end"  >> "start" and "end" use "YYYY-MM-DD" format
-    Strap.activity.get("user-guid-value", function (err, data) {
+    Strap.activity.get("guid", function (err, data) {
         /* etc */
     });
 
     // Fetch a user's behavior profile
     // URL resource: "guid"
     // Optional: none
-    Strap.behavior.get("user-guid-value", function (err, data) {
+    Strap.behavior.get("guid", function (err, data) {
         /* etc */
     });
 
@@ -196,8 +196,8 @@ strap.once('ready', function () {
 
     // Fetch a report's food data
     // URL resource: "id"
-    // Optional: none
-    Strap.food.get({params}, function (err, data) {
+    // Optional: "food"
+    Strap.report_food.get({params}, function (err, data) {
         /* etc */
     });
 
@@ -210,7 +210,7 @@ strap.once('ready', function () {
 
     // Fetch a report's workout data
     // URL resource: "id"
-    // Optional: none
+    // Optional: "workout"
     Strap.report_workout.get({params}, function (err, data) {
         /* etc */
     });
@@ -229,7 +229,7 @@ strap.once('ready', function () {
         /* etc */
     });
 
-    // Fetch a user's trend data
+    // Fetch a project or user's trend data
     // URL resource: none
     // Optional: "guid"
     Strap.trend.get({}, function (err, data) {
@@ -290,6 +290,13 @@ strap.once('ready', function () {
     // URL resource: none
     // Optional: "guid", "page", "per_page"
     Strap.week.get({}, function (err, data) {
+        /* etc */
+    });
+
+    // Fetch a project or user's wordcloud
+    // URL resource: none
+    // Optional: "guid"
+    Strap.wordcloud.get({}, function (err, data) {
         /* etc */
     });
 });
